@@ -26,7 +26,7 @@ const OnDemandSection = () => {
       </p>
 
       {/* Circles Section */}
-      <div className="flex justify-center gap-6 mt-10">
+      <div className="flex justify-center mt-10">
         {[
           { heading: 'FAST', subHeading: 'X2' },
           { heading: 'QUALITY', subHeading: 'A++' },
@@ -35,7 +35,7 @@ const OnDemandSection = () => {
         ].map((item, index) => (
           <div 
             key={index}
-            className="w-[140px] h-[140px] lg:w-[211px] lg:h-[211px] rounded-full flex flex-col justify-center items-center"
+            className="w-[80px] sm:w-[120px] h-[80px] sm:h-[120px] lg:w-[211px] lg:h-[211px] rounded-full flex flex-col justify-center items-center"
             style={{
               border: '1px solid transparent', 
               borderRadius: '50%',
@@ -44,7 +44,7 @@ const OnDemandSection = () => {
           >
             {/* Big Text */}
             <h3 
-              className="text-[24px] lg:text-[32px] font-bold bg-clip-text text-transparent"
+              className="text-[16px] lg:text-[32px] font-bold bg-clip-text text-transparent"
               style={{
                 background: 'linear-gradient(135deg, #FF4E83 0%, #FFBB54 100%)',
                 WebkitBackgroundClip: 'text',
@@ -56,7 +56,7 @@ const OnDemandSection = () => {
 
             {item.heading2 && (
               <h3 
-                className="text-[24px] lg:text-[32px] font-bold bg-clip-text text-transparent"
+                className="text-[16px] lg:text-[32px] font-bold bg-clip-text text-transparent"
                 style={{
                   background: 'linear-gradient(135deg, #FF4E83 0%, #FFBB54 100%)',
                   WebkitBackgroundClip: 'text',
@@ -69,7 +69,7 @@ const OnDemandSection = () => {
 
             {/* Small Text */}
             <p 
-              className="text-[18px] lg:text-[24px] font-medium bg-clip-text text-transparent"
+              className="text-[14px] lg:text-[24px] font-medium bg-clip-text text-transparent"
               style={{
                 background: 'linear-gradient(135deg, #FF4E83 0%, #FFBB54 100%)',
                 WebkitBackgroundClip: 'text',

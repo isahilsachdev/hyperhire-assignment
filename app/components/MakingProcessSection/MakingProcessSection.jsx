@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const MakingProcessSection = () => {
@@ -26,27 +27,29 @@ const MakingProcessSection = () => {
           <h2 className="text-[28px] md:text-[44px] font-bold">일반 제작</h2>
           <p className="text-gray-400 text-[16px] md:text-[20px] font-bold">제작 시작 후 5영업일 이내</p>
 
-          <div className="flex flex-col items-center space-y-4 mt-8 w-[90%]">
+          <div className="flex flex-col items-center space-y-4 mt-8 w-[98%] md:w-[90%]">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="w-full max-w-[98%] lg:w-[99%] lg:max-w-[99%] p-6 border-2 border-[#FFFFFF26] bg-black rounded-[52px] text-center tooltip-gray mb-2 flex lg:flex-row items-center justify-center gap-[12px] lg:gap-[72px]"
+                className="w-full max-w-[98%] lg:w-[99%] lg:max-w-[99%] p-6 border-2 border-[#FFFFFF26] bg-black rounded-[52px] text-center tooltip-gray mb-2 flex justify-center"
               >
-                <div>
-                  <h4
-                    className="text-lg md:text-xl font-bold bg-clip-text text-transparent md:text-[12px]"
-                    style={{
-                      background: 'linear-gradient(96.34deg, #FF4E83 0.62%, #FFBB54 97.92%)',
-                      WebkitBackgroundClip: 'text',
-                      backgroundClip: 'text',
-                    }}>
-                      {step.heading}
-                  </h4>
-                  <p className="text-gray-400 text-sm md:text-[12px]">{step.subHeading}</p>
-                </div>
-                <div>
-                  <p className="text-gray-400 text-sm md:text-[12px]">{step.description}</p>
-                  <p className="text-gray-400 text-sm md:text-[12px]">{step.description2}</p>
+                <div className='w-full md:w-[80%] flex md:flex-row items-center justify-between gap-[12px] md:gap-[72px]'>
+                  <div>
+                    <h4
+                      className="text-lg md:text-xl align-left font-bold bg-clip-text text-transparent md:text-[12px]"
+                      style={{
+                        background: 'linear-gradient(96.34deg, #FF4E83 0.62%, #FFBB54 97.92%)',
+                        WebkitBackgroundClip: 'text',
+                        backgroundClip: 'text',
+                      }}>
+                        {step.heading}
+                    </h4>
+                    <p className="text-gray-400 text-sm lg:text-[16px]">{step.subHeading}</p>
+                  </div>
+                  <div>
+                    <p className="text-gray-400 text-sm lg:text-[16px]">{step.description}</p>
+                    <p className="text-gray-400 text-sm lg:text-[16px]">{step.description2}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -88,15 +91,16 @@ const MakingProcessSection = () => {
               description: '편집 진행, 12~48시간 내 최종본 완성 및 납품',
               imgSrc: '/process3.svg',
             }].map((step, index) => (
-              <div key={index} className="flex flex-row gap-4 md:gap-2">
+              <div key={index} className="flex flex-row gap-6">
                 <div className="rounded-[15px] w-[100px] h-[100px] md:w-[134px] md:h-[134px] flex flex-col items-center justify-center mb-4" style={{background: 'linear-gradient(135deg, #FF4E83 0%, #FFBB54 100%)'}}>
                   <p className="text-sm md:text-md text-white-500 mb-2">STEP {index + 1}</p>
                   {
                     index !== 1 && (
-                      <img 
+                      <Image 
                         src={step.imgSrc} 
                         alt={step.title} 
-                        className="opacity-[0.7]" 
+                        width={36}
+                        height={18}
                       />
                     )
                   }
