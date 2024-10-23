@@ -13,7 +13,6 @@ const ContactForm = () => {
     message: '의뢰하실 영상내용 아래 예시를 참고하셔서 이 중 편하신 내용을 기재해주세요. 고객님의 비즈니스 유형 : 관공서/일반기업/소상공인 등 영상 장르 : 홍보,프로모션/IR/프레젠테이션 등 내용 : 제작하시고자 하는 영상의 내용을 간단히 기재해주세요.',
   });
 
-  console.log('form', formData)
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -24,7 +23,6 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data:', e);
   };
 
   const inputBoxClass = "w-full p-2 mt-2 text-white rounded-md bg-[#141414] h-[50px] px-[10px] border border-[#FFFFFF26]";
