@@ -8,9 +8,9 @@ import ScrollContainer from '@/app/components/ScrollContainer/ScrollContainer'
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className='bg-black flex flex-col'>
       <Header />
-      <img src="/banner.svg" alt="Logo" className="h-auto mr-3" />
+      <img src="/banner.svg" alt="Logo" className="h-auto" />
       <OnDemandSection />
 
       {/* Divider */}

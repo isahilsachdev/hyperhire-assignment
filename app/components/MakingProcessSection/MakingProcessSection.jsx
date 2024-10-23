@@ -10,31 +10,31 @@ const MakingProcessSection = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center my-[108px]">
+    <div className="flex flex-col items-center my-[108px] bg-black px-4 lg:px-0">
       <div className="relative mb-8 px-2">
-        <h2 className="text-center text-[32px] font-bold">
+        <h2 className="text-center text-[24px] md:text-[32px] font-bold">
           MAKING PROCESS
         </h2>
         <span className="absolute top-0 left-0 w-2 h-2 rounded-full bg-gradient-to-r from-[#FF4E83] to-[#FFBB54]"></span>
       </div>
 
       {/* Cards */}
-      <div className="flex space-x-8 h-auto">
+      <div className="h-auto flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 px-4 w-[98%] justify-center lg:w-[90%]">
         {/* Left Card */}
-        <div className="flex flex-col items-center w-[740px] max-w-[80%] h-inherit bg-[#141414] rounded-[20px] border border-[#FFFFFF26] py-12">
+        <div className="flex flex-col items-center w-full justify-center lg:w-[48%] max-w-full lg:max-w-[80%] h-inherit bg-[#141414] rounded-[20px] border border-[#FFFFFF26] py-12 px-4">
           {/* Card Content */}
-          <h2 className="text-[44px] font-bold">일반 제작</h2>
-          <p className="text-gray-400 text-[20px] font-bold">제작 시작 후 5영업일 이내</p>
+          <h2 className="text-[28px] md:text-[44px] font-bold">일반 제작</h2>
+          <p className="text-gray-400 text-[16px] md:text-[20px] font-bold">제작 시작 후 5영업일 이내</p>
 
-          <div className="flex flex-col items-center space-y-4 mt-8">
+          <div className="flex flex-col items-center space-y-4 mt-8 w-[90%]">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="w-[600px] p-6 border-2 border-[#FFFFFF26] bg-black rounded-[52px] text-center tooltip-gray mb-2 flex items-center gap-[72px] pl-[80px]"
+                className="w-full max-w-[98%] lg:w-[99%] lg:max-w-[99%] p-6 border-2 border-[#FFFFFF26] bg-black rounded-[52px] text-center tooltip-gray mb-2 flex lg:flex-row items-center justify-center gap-[12px] lg:gap-[72px]"
               >
                 <div>
                   <h4
-                    className="text-xl font-bold bg-clip-text text-transparent"
+                    className="text-lg md:text-xl font-bold bg-clip-text text-transparent md:text-[12px]"
                     style={{
                       background: 'linear-gradient(96.34deg, #FF4E83 0.62%, #FFBB54 97.92%)',
                       WebkitBackgroundClip: 'text',
@@ -42,11 +42,11 @@ const MakingProcessSection = () => {
                     }}>
                       {step.heading}
                   </h4>
-                  <p className="text-gray-400">{step.subHeading}</p>
+                  <p className="text-gray-400 text-sm md:text-[12px]">{step.subHeading}</p>
                 </div>
                 <div>
-                  <p className="text-gray-400">{step.description}</p>
-                  <p className="text-gray-400">{step.description2}</p>
+                  <p className="text-gray-400 text-sm md:text-[12px]">{step.description}</p>
+                  <p className="text-gray-400 text-sm md:text-[12px]">{step.description2}</p>
                 </div>
               </div>
             ))}
@@ -58,12 +58,12 @@ const MakingProcessSection = () => {
           style={{
             background: 'linear-gradient(#141414, #141414) padding-box, linear-gradient(135deg, #FF4E83, #FFBB54) border-box',
           }}
-          className="flex flex-col items-center w-[740px] max-w-[80%] h-inherit bg-[#141414] rounded-[20px] border border-[#FFFFFF26] py-12"
+          className="flex flex-col items-center w-full lg:w-[48%] max-w-full lg:max-w-[80%] h-inherit bg-[#141414] rounded-[20px] border border-[#FFFFFF26] py-12 px-4"
         >
           {/* Card Content */}
-            <div className="text-center mb-10">
+          <div className="text-center mb-10">
               <h2 
-                className="text-[44px] font-bold bg-clip-text text-transparent mb-4"
+                className="text-[28px] md:text-[44px] font-bold bg-clip-text text-transparent mb-4"
                 style={{
                   background: 'linear-gradient(96.34deg, #FF4E83 0.62%, #FFBB54 97.92%)',
                   WebkitBackgroundClip: 'text',
@@ -72,46 +72,55 @@ const MakingProcessSection = () => {
               >
                 Ploonet Quickserve™
               </h2>
-              <h4 className="text-lg md:text-xl font-bold">제작 시작 후 12~48시간 이내</h4>
-            </div>
-            <div className="flex flex-col mt-4 gap-5">
-              {[{
-                title: "제작 안내",
-                description: '영상 제작 문의를 통해 의뢰 확인 후 견적 및 진행 순서 안내',
-                imgSrc: '/process1.svg',
-              }, {
-                title: '영상 생성',
-                description: '스크립트 수신 즉시 가상인간 영상 생성 그외 이미지, 배경 음악 등 필요 요소 생성',
-                imgSrc: '/process1.svg',
-              }, {
-                title: '편집 및 납품',
-                description: '편집 진행, 12~48시간 내 최종본 완성 및 납품',
-                imgSrc: '/process3.svg',
-              }].map((step, index) => (
-                <div key={index} className="flex flex-row lg:gap-2">
-                  <div className="rounded-[15px] w-[100px] h-[100px] md:w-[134px] md:h-[134px] flex items-center flex-col justify-center mr-4 mb-4" style={{background: 'linear-gradient(135deg, #FF4E83 0%, #FFBB54 100%)'}}>
-                    <p className="text-sm md:text-md text-white-500 mb-2">STEP {index + 1}</p>
-                    {
-                      index !== 1 && (
-                        <img 
-                          src={step.imgSrc} 
-                          alt={step.title} 
-                          className="opacity-[0.7]" 
-                        />
-                      )
-                    }
-                  </div>
-
-                  <div className="md:ml-[20px] border-b border-b-[#FFFFFF26] flex flex-col justify-center w-auto flex-1">
-                    <h4 className="text-sm md:text-xl font-bold mb-2">{step.title}</h4>
-                    <p className="text-sm text-gray-300">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+              <h4 className="text-base md:text-xl font-bold">제작 시작 후 12~48시간 이내</h4>
           </div>
+          <div className="flex flex-col mt-4 gap-5">
+            {[{
+              title: "제작 안내",
+              description: '영상 제작 문의를 통해 의뢰 확인 후 견적 및 진행 순서 안내',
+              imgSrc: '/process1.svg',
+            }, {
+              title: '영상 생성',
+              description: '스크립트 수신 즉시 가상인간 영상 생성 그외 이미지, 배경 음악 등 필요 요소 생성',
+              imgSrc: '/process1.svg',
+            }, {
+              title: '편집 및 납품',
+              description: '편집 진행, 12~48시간 내 최종본 완성 및 납품',
+              imgSrc: '/process3.svg',
+            }].map((step, index) => (
+              <div key={index} className="flex flex-row gap-4 md:gap-2">
+                <div className="rounded-[15px] w-[100px] h-[100px] md:w-[134px] md:h-[134px] flex flex-col items-center justify-center mb-4" style={{background: 'linear-gradient(135deg, #FF4E83 0%, #FFBB54 100%)'}}>
+                  <p className="text-sm md:text-md text-white-500 mb-2">STEP {index + 1}</p>
+                  {
+                    index !== 1 && (
+                      <img 
+                        src={step.imgSrc} 
+                        alt={step.title} 
+                        className="opacity-[0.7]" 
+                      />
+                    )
+                  }
+                </div>
+
+                <div className="border-b border-b-[#FFFFFF26] flex flex-col justify-center flex-1">
+                  <h4 className="text-sm md:text-xl font-bold mb-2">{step.title}</h4>
+                  <p className="text-sm text-gray-300">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      
+      <div className='mt-16 px-4 lg:px-0'>
+        <p className="text-gray-400 text-sm md:text-base">
+          * 2~3분, 표준 견적에 따르는 일반 영상편집에 한정되며, 모션그래픽 등 전문 작업이 필요할 경우 작업 기간은 조정될 수 있습니다.
+        </p>
+        <p className="text-gray-400 text-sm md:text-base">
+          ** 영상의 길이, 영상 제작에 필요한 수준에 따라 빠른 작업이 불가할 수 있으며, 클라이언트와의 협의를 통해 작업 기간을 조정할 수 있습니다.
+        </p>
       </div>
     </div>
   );
