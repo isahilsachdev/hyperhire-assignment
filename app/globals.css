@@ -19,3 +19,20 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.tooltip-gray{
+  position: relative;
+  z-index: 1;
+}
+.tooltip-gray::before {
+  transform: translateX(-50%); 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #444444; 
+  width: 0;
+  height: 0;
+  content: '';
+  position: absolute;
+  top: 100%; 
+  left: 50%;
+}
