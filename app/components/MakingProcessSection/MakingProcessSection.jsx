@@ -33,7 +33,7 @@ const MakingProcessSection = () => {
                 key={index}
                 className={`w-[90%] max-w-[98%] lg:w-[99%] lg:max-w-[99%] p-6 border-2 border-[#FFFFFF26] bg-black rounded-[15px] md:rounded-[52px] text-center ${index !== 4 ? 'tooltip-gray' : ''} mb-2 flex`}
               >
-                <div className='w-full m-auto md:w-[90%] flex md:flex-row items-center gap-[32px] lg:gap-[22px] 2xl:w-[70%]'>
+                <div className='w-full m-auto md:w-[90%] flex md:flex-row items-center gap-[32px] lg:gap-[22px] 2xl:w-[80%]'>
                   <div>
                     <h4
                       className="text-[18px] whitespace-nowrap text-left font-bold bg-clip-text text-transparent md:text-[12px]"

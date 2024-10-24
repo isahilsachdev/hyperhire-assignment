@@ -94,6 +94,7 @@ const OnDemandSection = () => {
         <p className="text-gray-400 text-[16px] md:text-[20px] font-bold">
           영상 전문가의 터치를 더해 비용 및 시간은 절감하고 퀄리티는 보장된 영상을 만듭니다.
         </p>
+        <br />
         <p className="text-gray-400 text-[16px] md:text-[20px] font-bold">
           가격은 절반으로, 속도는 두배로, 품질은 A++!
         </p>
