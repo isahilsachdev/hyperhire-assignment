@@ -27,16 +27,16 @@ const MakingProcessSection = () => {
           <h2 className="text-[28px] md:text-[44px] font-bold">일반 제작</h2>
           <p className="text-gray-400 text-[16px] md:text-[20px] font-bold">제작 시작 후 5영업일 이내</p>
 
-          <div className="flex flex-col items-center space-y-4 mt-8 w-[98%] md:w-[90%]">
+          <div className="flex flex-col items-center space-y-4 mt-8 w-[98%] md:w-[94%]">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="w-full max-w-[98%] lg:w-[99%] lg:max-w-[99%] p-6 border-2 border-[#FFFFFF26] bg-black rounded-[52px] text-center tooltip-gray mb-2 flex justify-center"
+                className={`w-[90%] max-w-[98%] lg:w-[99%] lg:max-w-[99%] p-6 border-2 border-[#FFFFFF26] bg-black rounded-[15px] md:rounded-[52px] text-center ${index !== 4 ? 'tooltip-gray' : ''} mb-2 flex`}
               >
-                <div className='w-full md:w-[80%] flex md:flex-row items-center justify-between gap-[12px] md:gap-[72px]'>
+                <div className='w-full m-auto md:w-[90%] flex md:flex-row items-center gap-[32px] lg:gap-[22px] 2xl:w-[70%]'>
                   <div>
                     <h4
-                      className="text-lg md:text-xl align-left font-bold bg-clip-text text-transparent md:text-[12px]"
+                      className="text-[18px] whitespace-nowrap text-left font-bold bg-clip-text text-transparent md:text-[12px]"
                       style={{
                         background: 'linear-gradient(96.34deg, #FF4E83 0.62%, #FFBB54 97.92%)',
                         WebkitBackgroundClip: 'text',
@@ -44,11 +44,11 @@ const MakingProcessSection = () => {
                       }}>
                         {step.heading}
                     </h4>
-                    <p className="text-gray-400 text-sm lg:text-[16px]">{step.subHeading}</p>
+                    <p className="text-gray-400 whitespace-nowrap text-left text-[20px] text-white font-bold">{step.subHeading}</p>
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm lg:text-[16px]">{step.description}</p>
-                    <p className="text-gray-400 text-sm lg:text-[16px]">{step.description2}</p>
+                    <p className="text-gray-400 text-[18px] text-left">{step.description}</p>
+                    <p className="text-gray-400 text-[18px] text-left">{step.description2}</p>
                   </div>
                 </div>
               </div>
@@ -77,7 +77,7 @@ const MakingProcessSection = () => {
               </h2>
               <h4 className="text-base md:text-xl font-bold">제작 시작 후 12~48시간 이내</h4>
           </div>
-          <div className="flex flex-col mt-4 gap-5">
+          <div className="flex flex-col mt-4 gap-5 w-[80%]">
             {[{
               title: "제작 안내",
               description: '영상 제작 문의를 통해 의뢰 확인 후 견적 및 진행 순서 안내',
